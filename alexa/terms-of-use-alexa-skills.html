@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Privacy Policy for Alexa Skills</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Language" content="pt-br, en, es">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 lang="en">Terms of Use for Alexa Skills</h1>
+                <h1 lang="pt-br" style="display: none">Termos de Uso para Skills da Alexa</h1>
+                <h1 lang="es" style="display: none">Términos de uso para las habilidades de Alexa</h1>
+                <select class="selectpicker" data-width="fit" onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="pt-br">Português</option>
+                    <!--<option value="es">Español</option>-->
+                </select>
+            </div>
+            <div class="panel-body">
+                <div lang="en">
+                    <h2>General</h2>
+                    <p>This Terms of Use are an agreement between you (the ”user”) and Marcelo Vieira
+                        (“me”, “us” or “we”). Before using any of our Alexa Skills (“our skills”), please read this
+                        agreement and our <a href="">Alexa Skills Privacy Policy</a> as well as the <a
+                            href="https://www.amazon.com/gp/help/customer/display.html?nodeId=201809740">Alexa Terms of
+                            Use</a> by the Amazon
+                        Digital Services LLC (with its affiliates, “Amazon”).</p>
+                    <p>Regarding Amazon, “Alexa” means their Alexa Voice Service which includes third party services
+                        (like our skills) and other related Software.</p>
+                    <p>If you use one of our skills you fully agree to this Terms of Use.</p>
+                    <h2>Disclaimer</h2>
+                    <p>Our skills or parts of it may discontinue at any time or might contain errors. You use our skills
+                        on your own responsibility. Any information should not be seen as an advice.</p>
+                    <h2>Changes</h2>
+                    <p>Our skills or parts of it may change or be updated at any time. Further, our Terms of Use might
+                        change. You can find a link to this agreement on the description page of the skill in the Alexa
+                        App or in the Alexa Store. Your continued use of our skill after changes of the Terms of Use or
+                        the skill itself will be seen as your acceptance of both.</p>
+                    <!--<h2>For You</h2>
+                    <p>We love developing Alexa Skills for you. And we love to make things better by developing digital products and services.</p>-->
+                </div>
+                <div lang="pt-br" style="display: none">
+                    <h2>General</h2>
+                    <p>Estes Termos de Uso são um acordo entre você (the ”user”) e Marcelo Vieira
+                        (“eu” ou “nós”). Antes de utilizar qualquer um de nossos Alexa Skills (“nossos skills”), por
+                        favor leia este acordo e nossa <a href="">Política de Privacidade para Alexa Skills</a> bem como
+                        o <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=201809740">Termos de Uso
+                            da Alexa (em inglês)</a> da Amazon
+                        Digital Services LLC (com suas afiliadas, “Amazon”).</p>
+                    <p>Em relação à Amazon, “Alexa” significa o serviço de voz do Alexa que inclui serviços de
+                        terceiros(como nossos skills) e outros softwares relacionados.</p>
+                    <p>Se você utilizar um de nossos skills, você concorda plenamente com estes Termos de Uso.</p>
+                    <h2>Aviso Legal</h2>
+                    <p>Nossos skills ou partes dele podem ser interrompidos a qualquer momento ou podem conter erros.
+                        Você usa nossos skillspor sua própria conta. Qualquer informação não deve ser vista como um
+                        conselho.</p>
+                    <h2>Alterações</h2>
+                    <p>Nossos skills ou partes deles podem mudar ou serem atualizadas a qualquer momento. Além disso,
+                        nossos Termos de Uso podem mudar. Você pode encontrar um link para este acordo na
+                        página de descrição do skill no Alexa App ou na Loja Alexa. O uso de nosso
+                        skill após mudanças dos Termos de Uso ou do skill em si será considerado como a plena
+                        aceitação de ambos.</p>
+                </div>
+                <div lang="es" style="display: none">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    function changeLanguage(value) {
+        var languages = ["en", "pt-br", "es"];
+        var langToHide = languages.filter(function (ele) {
+            return ele != value;
+        });
+
+        langToHide.forEach(element => {
+            var el = document.querySelectorAll(":lang(" + element + ")");
+            el.forEach(e => {
+                e.style.display = 'none';
+            });
+        });
+
+        var el = document.querySelectorAll(":lang(" + value + ")");
+        el.forEach(e => {
+            e.style.display = '';
+        });
+    }
+</script>
+
+</html>
